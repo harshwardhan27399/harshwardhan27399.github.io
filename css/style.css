@@ -1,6 +1,6 @@
 /*
-  Theme Name: NewBiz
-  Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
+  Theme Name: TechnoPlus Labs
+  Theme URL: https://bootstrapmade.com/TechnoPlus Labs-bootstrap-business-template/
   Author: BootstrapMade.com
   License: https://bootstrapmade.com/license/
 */
@@ -849,8 +849,18 @@ h6 {
   background: #3395ff;
 }
 
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-preview:hover i,
-#portfolio .portfolio-item .portfolio-wrap .portfolio-info .link-details:hover i {
+#portfolio
+  .portfolio-item
+  .portfolio-wrap
+  .portfolio-info
+  .link-preview:hover
+  i,
+#portfolio
+  .portfolio-item
+  .portfolio-wrap
+  .portfolio-info
+  .link-details:hover
+  i {
   color: #fff;
 }
 
