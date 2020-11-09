@@ -64,7 +64,7 @@
 		function calSCL()
 		{
 			var x = document.getElementById("scl").value;
-			var m =  getCredit(x);
+			var m =  getCredit(x*0.66);
 			document.getElementById("sclm").innerHTML = m;
 		}
 		function calWT()
@@ -92,8 +92,8 @@
 			var a3=getCredit(document.getElementById("sc").value)*3;
 			var a4=getCredit(document.getElementById("dm").value)*4;
 			var a5=getCredit(document.getElementById("im").value)*3;
-			var a6=getCredit(document.getElementById("scl").value)*4;
-			var a7=getCredit(document.getElementById("wt").value)*1;
+			var a6=Math.round(getCredit(document.getElementById("scl").value)*4*0.66);
+			var a7=getCredit(document.getElementById("wt").value)*)1;
 			var a8=getCredit(document.getElementById("mp").value)*1;
 			var a9=getCredit(document.getElementById("mp2").value)*1;
 			var to=a1+a2+a3+a4+a5+a6+a7+a8+a9;
@@ -151,7 +151,7 @@
 	<tr>
       <th scope="row">6</th>
       <td>Major Project Phase 2</td>
-      <td><input type=text name="scl" id="scl" onchange="calSCL()" pattern="[4-9][0-9]{1}" title="Marks should be greater than 45 and less than 99" required/></td>
+      <td><input type=text name="scl" id="scl" onchange="calSCL()" title="Marks should be greater than 45 and less than 99" required/></td>
       <td><p id="sclm"></p></td>
     </tr>
 	<tr>
