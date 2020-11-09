@@ -92,8 +92,9 @@
 			var a3=getCredit(document.getElementById("sc").value)*3;
 			var a4=getCredit(document.getElementById("dm").value)*4;
 			var a5=getCredit(document.getElementById("im").value)*3;
-			var a6=Math.round(getCredit(document.getElementById("scl").value)*4*0.66);
-			var a7=getCredit(document.getElementById("wt").value)*)1;
+			var a6=getCredit(document.getElementById("scl").value * 0.66)*4;
+			a6=Math.round(a6);
+			var a7=getCredit(document.getElementById("wt").value)*1;
 			var a8=getCredit(document.getElementById("mp").value)*1;
 			var a9=getCredit(document.getElementById("mp2").value)*1;
 			var to=a1+a2+a3+a4+a5+a6+a7+a8+a9;
