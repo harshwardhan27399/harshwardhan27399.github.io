@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+
+    <title>Find Your Pointer</title>
+	<script>
+		function getCredit(m){
+			var ctr;
+			if(m>90 && m <=100)
+				ctr=10;
+			else if(m>85 && m <=90)
+				ctr=9;
+			else if(m>75 && m <=85)
+				ctr=8;
+			else if(m>65 && m <=75)
+				ctr=7;
+			else if(m>55 && m <=65)
+				ctr=6;
+			else if(m>45 && m <=55)
+				ctr=5;
+			else if(m>35 && m <=45)
+				ctr=4;
+			
+			return ctr;
+		}
+		function calMT()
+		{
+			var x = document.getElementById("mtm").value;
+			var m =  getCredit(x);
+			document.getElementById("mtms").innerHTML = m;
+		}
+		function calIS()
+		{
+			var x = document.getElementById("is").value;
+			var m =  getCredit(x);
+			document.getElementById("ism").innerHTML = m;
+		}
+		function calSC()
+		{
+			var x = document.getElementById("sc").value;
+			var m =  getCredit(x);
+			document.getElementById("scm").innerHTML = m;
+		}
+		function calDM()
+		{
+			var x = document.getElementById("dm").value;
+			var m =  getCredit(x);
+			document.getElementById("dmm").innerHTML = m;
+		}
+		function calIM()
+		{
+			var x = document.getElementById("im").value;
+			var m =  getCredit(x);
+			document.getElementById("imm").innerHTML = m;
+		}
+		function calSCL()
+		{
+			var x = document.getElementById("scl").value;
+			var m =  getCredit(x);
+			document.getElementById("sclm").innerHTML = m;
+		}
+		function calWT()
+		{
+			var x = document.getElementById("wt").value;
+			var m =  getCredit(x);
+			document.getElementById("wtm").innerHTML = m;
+		}
+		function calMP()
+		{
+			var x = document.getElementById("mp").value;
+			var m =  getCredit(x);
+			document.getElementById("mpm").innerHTML = m;
+		}
+		function calculateALL()
+		{
+			var a1=getCredit(document.getElementById("mtm").value)*3;
+			var a2=getCredit(document.getElementById("is").value)*4;
+			var a3=getCredit(document.getElementById("sc").value)*3;
+			var a4=getCredit(document.getElementById("dm").value)*3;
+			var a5=getCredit(document.getElementById("im").value)*3;
+			var a6=getCredit(document.getElementById("scl").value)*1;
+			var a7=getCredit(document.getElementById("wt").value)*4;
+			var a8=getCredit(document.getElementById("mp").value)*4;
+			var to=a1+a2+a3+a4+a5+a6+a7+a8;
+			//document.getElementById("total").innerHTML=to;
+			//document.getElementById("tp").innerHTML=to/25;
+			alert(" Total Credits :"+to+"\n Pointer : "+to/25);
+		}
+	</script>
+  </head>
+  <body>
+  <div class="container">
+  <div class="col-md-12">
+    <form name=f1 onsubmit="calculateALL()">
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col col-3">#</th>
+      <th scope="col col-4">Subject Name</th>
+      <th scope="col col-6">Marks</th>
+      <th scope="col col-2">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mobile Technology</td>
+      <td><input type=text name="mtm" id="mtm" width="50px" onchange="calMT()" required/></td>
+      <td><p id="mtms"></p></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Information Security</td>
+      <td><input type=text name="is" id="is" onchange="calIS()" required/></td>
+      <td><p id="ism"></p></td>
+    </tr>
+	<tr>
+      <th scope="row">3</th>
+      <td>Soft Computing</td>
+      <td><input type=text name="sc" id="sc" onchange="calSC()" required/></td>
+      <td><p id="scm"></p></td>
+    </tr>
+	<tr>
+      <th scope="row">4</th>
+      <td>Data mining and warehousing</td>
+      <td><input type=text name="dm" id="dm" onchange="calDM()" required/></td>
+      <td><p id="dmm"></p></td>
+    </tr>
+	<tr>
+      <th scope="row">5</th>
+      <td>Industrial Management</td>
+      <td><input type=text name="im" id="im" onchange="calIM()" required/></td>
+      <td><p id="imm"></p></td>
+    </tr>
+	<tr>
+      <th scope="row">6</th>
+      <td>Soft Computing Lab</td>
+      <td><input type=text name="scl" id="scl" onchange="calSCL()" required/></td>
+      <td><p id="sclm"></p></td>
+    </tr>
+	<tr>
+      <th scope="row">7</th>
+      <td>Web Technology Lab</td>
+      <td><input type=text name="wt" id="wt" onchange="calWT()" required/></td>
+      <td><p id="wtm"></p></td>
+    </tr>
+	<tr>
+      <th scope="row">8</th>
+      <td>Major Project</td>
+      <td><input type=text name="mp" id="mp" onchange="calMP()" required/></td>
+      <td><p id="mpm"></p></td>
+    </tr>
+    
+  </tbody>
+</table>
+	<input type=submit value="Calculate" ></input>
+	
+</form>
+</div>
+</div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
