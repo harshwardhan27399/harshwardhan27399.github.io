@@ -70,19 +70,19 @@
 		function calWT()
 		{
 			var x = document.getElementById("wt").value;
-			var m =  getCredit(x);
+			var m =  getCredit(x*2);
 			document.getElementById("wtm").innerHTML = m;
 		}
 		function calMP()
 		{
 			var x = document.getElementById("mp").value;
-			var m =  getCredit(x);
+			var m =  getCredit(x*2);
 			document.getElementById("mpm").innerHTML = m;
 		}
 		function calMP2()
 		{
 			var x = document.getElementById("mp2").value;
-			var m =  getCredit(x);
+			var m =  getCredit(x*2);
 			document.getElementById("mpm2").innerHTML = m;
 		}
 		function calculateALL()
@@ -94,9 +94,9 @@
 			var a5=getCredit(document.getElementById("im").value)*3;
 			var a6=getCredit(document.getElementById("scl").value * 0.66)*4;
 			a6=Math.round(a6);
-			var a7=getCredit(document.getElementById("wt").value)*1;
-			var a8=getCredit(document.getElementById("mp").value)*1;
-			var a9=getCredit(document.getElementById("mp2").value)*1;
+			var a7=getCredit(document.getElementById("wt").value*2)*1;
+			var a8=getCredit(document.getElementById("mp").value*2)*1;
+			var a9=getCredit(document.getElementById("mp2").value*2)*1;
 			var to=a1+a2+a3+a4+a5+a6+a7+a8+a9;
 			//document.getElementById("total").innerHTML=to;
 			//document.getElementById("tp").innerHTML=to/25;
